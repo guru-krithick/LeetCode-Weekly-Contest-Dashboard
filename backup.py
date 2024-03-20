@@ -51,7 +51,7 @@ col1,col2 = st.columns([1,1])
 domain_counts = filtered_data['Domain'].value_counts()
 
 with col2:
-    coooo1,coooo2,coooo3 = st.columns([1,1,1])
+    coooo1,coooo2,coooo3,coooo4 = st.columns([1,1,1,1])
     with coooo1:
 # Problems Solved Count
         problem_counts = range(5)  # Assuming max problems solved can be 4
@@ -73,7 +73,11 @@ with col2:
         problem_4_count = sum(filtered_data_rank_not_zero['ProbCount'] == 4)
     with coooo2:
         st.write("")
+
     with coooo3:
+        st.write("")
+
+    with coooo4:
         # Display total problems solved metric
         st.metric("Total Problems Solved", sum(problem_data['Count']))
 
@@ -94,7 +98,7 @@ with col2:
         
 with col1:
 
-    cde1,cde2,cde3 = st.columns([1,1,1])
+    cde1,cde2,cde3,cde4 = st.columns([1,1,1,1])
     with cde1:
         rank_presence = filtered_data['Rank'].apply(lambda x: 'Absent' if x == 0 else 'Present')
         presence_data = pd.DataFrame({'Presence': rank_presence.value_counts().index,
@@ -111,8 +115,12 @@ with col1:
     with cde2:
 
         st.write("")
-    
+
     with cde3:
+        st.write("")
+    
+    
+    with cde4:
         st.write("")
         st.write("")
         st.write("")
@@ -152,7 +160,7 @@ with colf2:
     
     
 with colf1:
-    coq1,coq2,coq3 = st.columns([1,1,1])
+    coq1,coq2,coq3,coq4 = st.columns([1,1,1,1])
     with coq1:
 
         # Rank Distribution by Range
@@ -171,8 +179,11 @@ with colf1:
         st.plotly_chart(fig_rank)
     with coq2:
         st.write("")
-
+    
     with coq3:
+        st.write("")
+
+    with coq4:
 
     #st.subheader("Rank Range:")rank_data.iloc[0]['Rank Range'], rank_data.iloc[0]['Count']
 
