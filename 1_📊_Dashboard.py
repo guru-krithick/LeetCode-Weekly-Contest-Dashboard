@@ -1,9 +1,8 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-from background import BackgroundCSSGenerator
-# Load data
 
+# Load data
 st.session_state.data = pd.read_csv('data.csv')
 data = st.session_state.data
 
