@@ -2,9 +2,8 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 from background import BackgroundCSSGenerator
-# Load data
 
-st.session_state.data = pd.read_csv('data.csv')
+st.session_state.data = pd.read_csv('./data.csv')
 data = st.session_state.data
 
 st.set_page_config(layout="wide")
